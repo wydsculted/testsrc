@@ -45,7 +45,7 @@ const embedDirectly = [
 ];
 
 const embedAlternative = {
-  "securlywho.life": "https://securlywho.gg/above"
+  "securlywho.life": "https://securlywho.life/above"
 };
 
 let destination = "";
