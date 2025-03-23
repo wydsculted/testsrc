@@ -1,0 +1,82 @@
+[
+  {
+    "link": "https://docs.google.com/forms/d/e/1FAIpQLSfwbzjCxFTm1_rVIG3h-UNDq4I4sKIs2_xQoFE93h_y8uxjaw/viewform?usp=dialog",
+    "imgSrc": "https://games.above.gay/!img/appreq.png",
+    "title": "! Request an App"
+  },
+  {
+    "link": "https://youtube.com",
+    "imgSrc": "assets/youtube.png",
+    "title": "YouTube"
+  },
+  {
+    "link": "https://twitch.tv",
+    "imgSrc": "assets/twitch.png",
+    "title": "Twitch"
+  },
+  {
+    "link": "https://e.widgetbot.io/channels/1341303023107837982/1341442897567813702",
+    "imgSrc": "assets/discord.png",
+    "title": "Discord"
+  },
+  {
+    "link": "https://x.com",
+    "imgSrc": "assets/twitter.png",
+    "title": "Twitter"
+  },
+  {
+    "link": "https://instagram.com",
+    "imgSrc": "assets/instagram.png",
+    "title": "Instagram"
+  },
+  {
+    "link": "https://reddit.com",
+    "imgSrc": "assets/reddit.png",
+    "title": "Reddit"
+  },
+  {
+    "link": "https://tiktok.com",
+    "imgSrc": "assets/tiktok.png",
+    "title": "TikTok"
+  },
+  {
+    "link": "https://pinterest.com",
+    "imgSrc": "assets/pinterest.png",
+    "title": "Pinterest"
+  },
+  {
+    "link": "https://github.com",
+    "imgSrc": "assets/github.png",
+    "title": "GitHub"
+  },
+  {
+    "link": "https://extprint3r.github.io",
+    "imgSrc": "assets/extprint3r.png",
+    "title": "ExtPrint3r"
+  },
+  {
+    "link": "https://ext-remover.net",
+    "imgSrc": "assets/extremover.png",
+    "title": "ext remover"
+  },
+  {
+    "link": "https:/duckduckgo.com",
+    "imgSrc": "assets/duckduckgo.png",
+    "title": "DuckDuckGo"
+  },
+  {
+    "link": "https://google.com",
+    "imgSrc": "assets/google.png",
+    "title": "Google"
+  },
+  {
+    "link": "https://spotify.com",
+    "imgSrc": "assets/spotify.png",
+    "title": "Spotify"
+  },
+  {
+    "link": "https://character.ai",
+    "imgSrc": "assets/cai.png",
+    "title": "character.ai"
+  }
+]
