@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/Abovescore/zkit/main/style.css">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/Abovescore/zkit/main/resources/zkit.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Atkinson+Hyperlegible+Next:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+    <meta property="benrogo:index", content="index">
+    <meta property="benrogo:uvpath", content="/z/kit/uv.config.js">
+    
+    <title>Securly Who? Launcher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Atkinson Hyperlegible Next', serif;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #111;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            transition: background-color 0.3s ease;
+        }
+
+        .container {
+            background-color: #222;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+            width: 100%;
+            max-width: 450px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-shadow: 
+                0 0 20px rgba(0, 0, 0, 0.6),
+                0 0 30px rgba(0, 0, 0, 0.6),
+                0 0 40px rgba(0, 0, 0, 0.5),
+                0 0 50px rgba(0, 0, 0, 0.4),
+                0 0 60px rgba(0, 0, 0, 0.3),
+                0 0 70px rgba(0, 0, 0, 0.2);
+            animation: auraAnimation 2s infinite alternate, colorChange 3s infinite alternate;
+        }
+
+        @keyframes auraAnimation {
+            0% {
+                text-shadow: 
+                    0 0 20px rgba(0, 0, 0, 0.6),
+                    0 0 30px rgba(0, 0, 0, 0.6),
+                    0 0 40px rgba(0, 0, 0, 0.5),
+                    0 0 50px rgba(0, 0, 0, 0.4),
+                    0 0 60px rgba(0, 0, 0, 0.3),
+                    0 0 70px rgba(0, 0, 0, 0.2);
+            }
+            50% {
+                text-shadow: 
+                    0 0 30px rgba(0, 0, 0, 0.7),
+                    0 0 40px rgba(0, 0, 0, 0.7),
+                    0 0 50px rgba(0, 0, 0, 0.6),
+                    0 0 60px rgba(0, 0, 0, 0.5),
+                    0 0 70px rgba(0, 0, 0, 0.4),
+                    0 0 80px rgba(0, 0, 0, 0.3);
+            }
+            100% {
+                text-shadow: 
+                    0 0 40px rgba(0, 0, 0, 0.8),
+                    0 0 50px rgba(0, 0, 0, 0.8),
+                    0 0 60px rgba(0, 0, 0, 0.7),
+                    0 0 70px rgba(0, 0, 0, 0.6),
+                    0 0 80px rgba(0, 0, 0, 0.5),
+                    0 0 90px rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #fff;
+            }
+            50% {
+                color: #aaa;
+            }
+            100% {
+                color: #fff;
+            }
+        }
+
+        label {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: #ccc;
+            font-weight: bold;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 8px;
+            background-color: #333;
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        input:focus, select:focus, button:focus {
+            outline: none;
+            border: 2px solid #007BFF;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            background-color: #003f8e;
+            transform: scale(1.1);
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background-color: #111;
+            transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+        }
+
+        button:hover::before {
+            width: 350%;
+            height: 350%;
+            top: -25%;
+            left: -25%;
+        }
+
+        button span {
+            position: relative;
+            z-index: 1;
+        }
+
+        button:hover {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .footer {
+            font-size: 0.9rem;
+            text-align: center;
+            color: #aaa;
+            margin-top: 15px;
+        }
+
+        .footer a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Ensure it stays in the background */
+        }
+    </style>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PD7FMG25');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PD7FMG25"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="container">
+        <h1>Securly Who Launcher</h1>
+        
+        <label for="title-input">Page Title</label>
+        <input type="text" id="title-input" placeholder="New Tab" value="New Tab"/>
+
+        <label for="pre-saved-options">Page Icon</label>
+        <select id="pre-saved-options">
+            <option value="" selected="selected">Choose an Option</option>
+            <option value="schoology">Schoology</option>
+            <option value="clever">Clever</option>
+            <option value="google-classroom">Google Classroom</option>
+            <option value="googledocs">Google Docs</option>
+            <option value="googleslides">Google Slides</option>
+            <option value="canvas">Canvas</option>
+        </select>
+        
+        <button id="generate-button"><span>Launch Z-Kit</span></button>
+    </div>
+
+    <script>
+        const url = "securlywho.unblocked.gg";
+
+        document.getElementById('pre-saved-options').addEventListener('change', (e) => {
+            const titleInput = document.getElementById('title-input');
+            if (e.target.value) {
+                if (e.target.value === 'google-classroom') {
+                    titleInput.value = 'Home';
+                } else if (e.target.value === 'clever') {
+                    titleInput.value = 'Clever | Portal';
+                } else if (e.target.value === 'schoology') {
+                    titleInput.value = 'Home | Schoology';
+                } else if (e.target.value === 'googledocs') {
+                    titleInput.value = 'Untitled document - Google Docs';
+                } else if (e.target.value === 'googleslides') {
+                    titleInput.value = 'Untitled presentation - Google Slides';
+                } else if (e.target.value === 'canvas') {
+                    titleInput.value = 'Dashboard';
+                }
+            } else {
+                titleInput.value = 'New Tab';
+            }
+        });
+
+        document.getElementById('generate-button').addEventListener('click', () => {
+            const titleInput = document.getElementById('title-input');
+            const title = titleInput.value;
+
+            let faviconUrl = '';
+
+            const preSavedOption = document.getElementById('pre-saved-options').value;
+            if (preSavedOption === 'schoology') {
+                faviconUrl = 'https://raw.githubusercontent.com/Abovescore/zkit/main/resources/icons/schoology.png';
+            } else if (preSavedOption === 'google-classroom') {
+                faviconUrl = 'https://raw.githubusercontent.com/Abovescore/zkit/main/resources/icons/classroom.png';
+            } else if (preSavedOption === 'clever') {
+                faviconUrl = 'https://raw.githubusercontent.com/Abovescore/zkit/main/resources/icons/clever.png';
+            } else if (preSavedOption === 'googledocs') {
+                faviconUrl = 'https://raw.githubusercontent.com/Abovescore/zkit/main/resources/icons/googledocs.png';
+            } else if (preSavedOption === 'googleslides') {
+                faviconUrl = 'https://raw.githubusercontent.com/Abovescore/zkit/main/resources/icons/googleslides.png';
+            } else if (preSavedOption === 'canvas') {
+                faviconUrl = 'https://raw.githubusercontent.com/Abovescore/zkit/main/resources/icons/canvas.png';
+            }
+
+            var win = window.open();
+            win.document.title = title;
+
+            var link = win.document.createElement('link');
+            link.rel = 'shortcut icon';
+            link.href = faviconUrl;
+            win.document.head.appendChild(link);
+
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100vh';
+
+            var iframe = win.document.createElement('iframe');
+            iframe.style.border = 'none';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.margin = '0';
+            iframe.src = url;
+
+            win.document.body.appendChild(iframe);
+
+            window.location.href = "https://www.google.com/";
+        });
+    </script>
+
+<div id="particles-js"></div>
+
+<script src="assets/js/particles.min.js"></script>
+<script>
+  particlesJS.load('particles-js', 'assets/json/particlesjs-config.json', function() {
+    console.log('particles.js loaded');
+  });
+</script>
+</body>
+</html>
