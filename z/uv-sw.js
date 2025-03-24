@@ -1,4 +1,4 @@
-importScripts("/z/kit/uv.sw.js");
+importScripts("/securly/who/uv.sw.js");
 
 const sw = new UVServiceWorker();
 
