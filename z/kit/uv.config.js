@@ -1,6 +1,6 @@
 self.__uv$config = {
     prefix: '/securly/who/',
-    bare:'https://goto.securlywho.unblocked.gg/bare/',
+    bare:'https://goto.securlywho.life/bare/',
     encodeUrl: Ultraviolet.codec.xor.encode,
     decodeUrl: Ultraviolet.codec.xor.decode,
     handler: '/securly/who/uv.handler.js',
